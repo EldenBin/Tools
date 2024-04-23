@@ -110,11 +110,11 @@ for fuzz in ${fuzz_list[@]}; do
 		(( total_requests++ ))
 		
 		if [ "$http_code" -ne 403 ] && [ "$http_code" -ne 404 ] && [ "$http_code" -ne 401 ] && [ "$http_code" -ne 000 ]; then
-            	echo -e "[+] $url$path$fuzz -- HTTP code:$green $http_code $end-- Size download: $size_download <== [!] CHECK"
-            	find+=("$http_code -- $size_download -- $url$path$fuzz")
-        else
-            	echo -e "[+] $url$path$fuzz -- HTTP code:$red $http_code $end-- Size download: $size_download"
-        fi
+            		echo -e "[+] $url$path$fuzz -- HTTP code:$green $http_code $end-- Size download: $size_download <== [!] CHECK"
+            		find+=("$http_code -- $size_download -- $url$path$fuzz")
+       		else
+            		echo -e "[+] $url$path$fuzz -- HTTP code:$red $http_code $end-- Size download: $size_download"
+       		fi
 
 done
 
@@ -132,11 +132,11 @@ for fuzz in ${fuzz_list[@]}; do
 		(( total_requests++ ))
 		
 		if [ "$http_code" -ne 403 ] && [ "$http_code" -ne 404 ] && [ "$http_code" -ne 401 ] && [ "$http_code" -ne 000 ]; then
-            	echo -e "[+] $url$fuzz$path -- HTTP code:$green $http_code $end-- Size download: $size_download <== [!] CHECK"
-            	find+=("$http_code -- $size_download -- $url$fuzz$path")
-        else
-            	echo -e "[+] $url$fuzz$path -- HTTP code:$red $http_code $end-- Size download: $size_download"
-        fi
+            		echo -e "[+] $url$fuzz$path -- HTTP code:$green $http_code $end-- Size download: $size_download <== [!] CHECK"
+            		find+=("$http_code -- $size_download -- $url$fuzz$path")
+        	else
+            		echo -e "[+] $url$fuzz$path -- HTTP code:$red $http_code $end-- Size download: $size_download"
+        	fi
 
 done
 
@@ -222,11 +222,11 @@ for method in ${req_methods[@]}; do
 		(( total_requests++ ))
 		
 		if [ "$http_code" -ne 403 ] && [ "$http_code" -ne 400 ] && [ "$http_code" -ne 401 ] && [ "$http_code" -ne 000 ]; then
-            	echo -e "[+] $method -- HTTP code:$green $http_code $end-- Size download: $size_download <== [!] CHECK"
-            	find+=("$http_code -- $size_download -- $method")
-        else
-            	echo -e "[+] $method -- HTTP code:$red $http_code $end-- Size download: $size_download"
-        fi
+            		echo -e "[+] $method -- HTTP code:$green $http_code $end-- Size download: $size_download <== [!] CHECK"
+            		find+=("$http_code -- $size_download -- $method")
+        	else
+            		echo -e "[+] $method -- HTTP code:$red $http_code $end-- Size download: $size_download"
+        	fi
 
 done
 
