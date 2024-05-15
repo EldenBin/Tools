@@ -123,7 +123,7 @@ _parse_args() {
                 
                 if [ $m_set ]
                 then
-                    echo -e "$error Parsing argument error: ${cyan}--methods${end} flag already set!"
+                    echo -e "$error Parsing argument error: ${cyan}$1${end} flag already set!"
                     exit 1
                 fi
 
@@ -149,7 +149,7 @@ _parse_args() {
 
                 if [ $u_set ]
                 then
-                    echo -e "$error Parsing argument error: ${cyan}--useragents${end} flag already set!"
+                    echo -e "$error Parsing argument error: ${cyan}$1${end} flag already set!"
                     exit 1
                 fi
 
@@ -201,7 +201,7 @@ _parse_args() {
 
                 if [ $s_set ]
                 then
-                    echo -e "$error Parsing argument error: ${cyan}--skip${end} flag already set!"
+                    echo -e "$error Parsing argument error: ${cyan}$1${end} flag already set!"
                     exit 1
                 fi
 
@@ -214,7 +214,7 @@ _parse_args() {
 
                 if [ $dir_set ]
                 then
-                    echo -e "$error Parsing argument error: ${cyan}--dir${end} flag already set!"
+                    echo -e "$error Parsing argument error: ${cyan}$1${end} flag already set!"
                     exit 1
                 fi
 
