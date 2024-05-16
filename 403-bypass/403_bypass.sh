@@ -568,20 +568,20 @@ _headers_fuzzing() {
     echo -e "$information Collected $yellow$(( ${#headers[@]} + ${#ips[@]} ))$end words"
 
 	for method in "${headers[@]}"
-    do
+    	do
 
-			echo -e "\n$information $yellow$method$end"
+		echo -e "\n$information $yellow$method$end"
 
-			for ip in "${ips[@]}"
-            do
+		for ip in "${ips[@]}"
+            	do
 			
-				read -r http_code size_download <<< "$(curl -s -o /dev/null -iL -w "%{http_code} %{size_download}" -H "$method$ip" "$url$path")"
+			read -r http_code size_download <<< "$(curl -s -o /dev/null -iL -w "%{http_code} %{size_download}" -H "$method$ip" "$url$path")"
 				
-				(( total_requests++ ))
+			(( total_requests++ ))
 
-                _check_http_codes "Header: $yellow$method$ip$end"
+                	_check_http_codes "Header: $yellow$method$ip$end"
 			
-			done
+		done
 
 	done
 
