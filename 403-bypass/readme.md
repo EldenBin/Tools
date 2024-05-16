@@ -15,7 +15,7 @@ For example:
 
     ./403-bypass.sh "http://example.com" "/endpoint"
 
-    ./403-bypass.sh "http://example.com" "/endpoint" "custom_wordlist1.txt" "custom_wordlist2.txt"
+    ./403-bypass.sh "http://example.com" "/endpoint" -dir /custom_wordlist.txt --methods -o
 
 Options
 ----------
