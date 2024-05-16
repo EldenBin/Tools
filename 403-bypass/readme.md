@@ -50,6 +50,10 @@ Options
 
         ./403_bypass.sh "http://www.example.com" "/endpoint" -u --methods --skip
 
+  - <code>--download-wordlists</code> | <code>--skip</code>: Download default wordlists
+
+        ./403_bypass.sh --help
+
 - <code>-h</code> | <code>--help</code> | <code>--h</code>: Show help message and exit
 
         ./403_bypass.sh --help
