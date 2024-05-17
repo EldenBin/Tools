@@ -20,7 +20,7 @@ For example:
 Options
 ----------
 
-- <code>-dir [endpaths_wordlist.txt] [midpaths_wordlist.txt]</code>: Use different wordlist(s) to perform directory fuzzing, considering that this tool manipulates the URL as follows: <b>http:/target.com:1337/midpaths/endpoint/endpaths</b>.
+- <code>-dir [endpaths_wordlist.txt] [midpaths_wordlist.txt]</code>: Use different wordlist(s) to perform directory fuzzing, considering that this tool manipulates the URL as follows: <b>http:/target.com:1337/midpaths/endpoint/endpaths</b>
 
 
         ./403-bypass.sh "http://example.com" "/endpoint" --dir /custom_endpaths_wordlist.txt
